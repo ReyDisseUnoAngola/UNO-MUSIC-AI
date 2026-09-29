@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UNO MUSIC AI</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#080808;
+color:white;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+padding:25px 18px;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+margin-bottom:5px;
+}
+
+.logo span{
+color:#ff7a00;
+}
+
+.subtitle{
+color:#aaa;
+margin-bottom:25px;
+}
+
+.card{
+background:#151515;
+border:1px solid #292929;
+border-radius:18px;
+padding:20px;
+margin-bottom:18px;
+}
+
+h2{
+margin-top:0;
+}
+
+label{
+display:block;
+margin-top:15px;
+margin-bottom:7px;
+color:#bbb;
+font-size:14px;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:13px;
+border-radius:10px;
+border:1px solid #333;
+background:#0d0d0d;
+color:white;
+font-size:15px;
+}
+
+textarea{
+height:130px;
+resize:none;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:18px;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.generate{
+background:#ff7a00;
+color:black;
+}
+
+.uno{
+background:#292929;
+color:white;
+}
+
+#resultado{
+display:none;
+margin-top:15px;
+padding:15px;
+border-radius:10px;
+background:#17351d;
+color:#a5ffad;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+UNO <span>MUSIC AI</span> 🎵
+</div>
+
+<div class="subtitle">
+Cria. Canta. Lança.
+</div>
+
+<div class="card">
+
+<h2>🎶 Criar música</h2>
+
+<label>Título da música</label>
+
+<input
+id="titulo"
+placeholder="Ex.: Abre a Bagagem"
+>
+
+<label>Estilo musical</label>
+
+<select id="estilo">
+
+<option>Kuduro moderno</option>
+<option>Afrohouse</option>
+<option>Afrobeat</option>
+<option>Trap</option>
+<option>Kizomba</option>
+
+</select>
+
+<label>Voz</label>
+
+<select id="voz">
+
+<option>Masculina</option>
+<option>Feminina</option>
+<option>Dueto</option>
+
+</select>
+
+<label>Letra ou ideia</label>
+
+<textarea
+id="letra"
+placeholder="Escreve a letra ou descreve a música que queres criar..."
+></textarea>
+
+<button
+class="generate"
+onclick="gerarMusica()">
+
+GERAR MÚSICA 🎵
+
+</button>
+
+<div id="resultado">
+
+✅ Pedido recebido!
+
+<br><br>
+
+O UNO MUSIC AI está preparado para receber o motor de geração musical IA.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🔥 Modo REY DISSE UNO</h2>
+
+<p>
+Refrões fortes, energia alta e identidade de kuduro moderno.
+</p>
+
+<button
+class="uno"
+onclick="modoUno()">
+
+USAR MODO UNO
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function gerarMusica(){
+
+document.getElementById("resultado").style.display="block";
+
+}
+
+function modoUno(){
+
+document.getElementById("estilo").value="Kuduro moderno";
+
+document.getElementById("letra").value=
+"Criar uma música comercial, com refrão forte, curto e fácil de memorizar, energia de festa e identidade angolana.";
+
+}
+
+</script>
+
+</body>
+</html>
